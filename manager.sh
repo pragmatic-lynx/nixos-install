@@ -12,12 +12,7 @@ fi
 
 echo "=== NixOS Manager Quick Setup ==="
 
-# Enable flakes if not already enabled
-echo "Enabling flakes..."
-mkdir -p /etc/nix
-cat > /etc/nix/nix.conf << EOF
-experimental-features = nix-command flakes
-EOF
+
 
 # Generate hardware config if missing
 if [ ! -f "/etc/nixos/hardware-configuration.nix" ]; then
