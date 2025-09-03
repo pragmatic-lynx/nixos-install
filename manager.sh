@@ -96,28 +96,13 @@ create_configuration() {
     LC_PAPER = "en_AU.UTF-8";
     LC_TELEPHONE = "en_AU.UTF-8";
     LC_TIME = "en_AU.UTF-8";
-  };
-
-  # Enable the X11 windowing system.
-  services.xserver = {
-    enable = true;
-    
-    # Enable the KDE Plasma Desktop Environment.
-    displayManager.sddm.enable = true;
-    desktopManager.plasma6.enable = true;
-    
-    # Configure keymap
-    xkb = {
-      layout = "us";
-      variant = "";
-    };
-  };
+  };  
 
   # Enable CUPS to print documents.
   services.printing.enable = true;
 
   # Enable sound with pipewire.
-  sound.enable = true;
+  # sound.enable = true;
   hardware.pulseaudio.enable = false;
   security.rtkit.enable = true;
   services.pipewire = {
@@ -136,9 +121,7 @@ create_configuration() {
     description = "Management Admin";
     extraGroups = [ "networkmanager" "wheel" ];
     initialPassword = "changeme";
-    packages = with pkgs; [
-      kdePackages.kate
-    ];
+    
   };
 
   # Allow unfree packages
