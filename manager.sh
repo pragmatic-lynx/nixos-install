@@ -103,7 +103,7 @@ create_configuration() {
 
   # Enable sound with pipewire.
   # sound.enable = true;
-  hardware.pulseaudio.enable = false;
+  services.pulseaudio.enable = false;
   security.rtkit.enable = true;
   services.pipewire = {
     enable = true;
@@ -194,7 +194,7 @@ EOL
     # Add closing configuration
     cat >> /etc/nixos/configuration.nix << 'EOL'
 
-  system.stateVersion = "24.05";
+  system.stateVersion = "25.05";
 }
 EOL
 
