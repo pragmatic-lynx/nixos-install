@@ -10,7 +10,7 @@ if [ "$EUID" -ne 0 ]; then
     exit 1
 fi
 
-echo "=== NixOS Manager Quick Setup ==="
+echo "=== NixOS Manager Quick Setup v1 ==="
 
 
 
