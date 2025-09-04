@@ -57,7 +57,6 @@ cat > /etc/nixos/configuration.nix << 'EOF'
   users.users.admin = {
     isNormalUser = true;
     extraGroups = [ "networkmanager" "wheel" ];
-    initialPassword = "changeme";
   };
 
   environment.systemPackages = with pkgs; [
